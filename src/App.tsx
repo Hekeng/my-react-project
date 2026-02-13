@@ -6,13 +6,13 @@ import './App.css'
 // import { HelloText, HelloNumber } from "./components/Hello"
 // import { ButtonText } from './components/HelloButton'
 
-import TwoButtons from './components/H1ContentText'
+import SchowInput from './components/TwoButtons'
 
 function App() {
   return (
   
       <div>
-        <TwoButtons />
+        <SchowInput />
       </div>
   )
 }

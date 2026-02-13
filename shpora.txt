@@ -26,6 +26,15 @@ const [stateVariable, setStateVariable] = useState<Тип>(начальноеЗ�
 
 React.createElement(type, props, children)
 
+<form  onSubmit={(e) => e.preventDefault()} action="" method="post">
+			<label htmlFor="inp-text">Input your text: </label>
+			<input type="text" name="" id="inp-text" value={text} onChange={handleChange}/>
+			<button type="button" onClick={clearInput}>CLEAR</button>
+		</form>
+        
+e.target.value      // текст в input
+e.target.checked    // checkbox
+e.preventDefault()  // отмена submit
 
 План изучения TypeScript + React стек
 Часть 1: Основы TypeScript
