@@ -20,6 +20,7 @@ const projectsData = [
 	{
 		id: "01",
 		title: 'Gaming streaming portal',
+		path: 'gaming_streaming_portal',
 		skills: 'React, Node.js, MongoDB',
 		img: project01,
 		bigImg: project01Big,
@@ -29,6 +30,7 @@ const projectsData = [
 	{
 		id: "02",
 		title: 'Video service',
+		path: 'video_sevice',
 		skills: 'React, Node.js, MongoDB',
 		img: project02,
 		bigImg: project02Big,
@@ -38,6 +40,7 @@ const projectsData = [
 	{
 		id: "03",
 		title: 'Video portal',
+		path: 'video_portal',
 		skills: 'React, Node.js, MongoDB',
 		img: project03,
 		bigImg: project03Big,
@@ -47,6 +50,7 @@ const projectsData = [
 	{
 		id: "04",
 		title: 'Dating app',
+		path: 'dating_app',
 		skills: 'React, Node.js, MongoDB',
 		img: project04,
 		bigImg: project04Big,
@@ -56,6 +60,7 @@ const projectsData = [
 	{
 		id: "05",
 		title: 'Landing',
+		path: 'landing',
 		skills: 'React, Node.js, MongoDB',
 		img: project05,
 		bigImg: project05Big,
@@ -65,6 +70,7 @@ const projectsData = [
 	{
 		id: "06",
 		title: 'Gaming community',
+		path: 'gaming_community',
 		skills: 'React, Node.js, MongoDB',
 		img: project06,
 		bigImg: project06Big,
@@ -73,4 +79,15 @@ const projectsData = [
 	}
 ]
 
-export {projectsData}
+
+
+const menuItems = [
+	
+	{ path: '/', label: 'Home' },
+  	{ path: '/projects', label: 'Projects' },
+  	{ path: '/contacts', label: 'Contacts' },
+  	{ path: '/skills', label: 'Skills' },
+  
+];
+
+export {projectsData, menuItems}

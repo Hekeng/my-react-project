@@ -7,15 +7,15 @@ const ContactsPage = () => {
 					<ul className="content-list">
 						<li className="content-list__item">
 							<h2 className="title-2">Location</h2>
-							<p>Moscow, Russia</p>
+							<p>Ukrain, Riev</p>
 						</li>
 						<li className="content-list__item">
 							<h2 className="title-2">Telegram / WhatsApp</h2>
-							<p><a href="tel:+79051234567">+7 (905) 123-45-67</a></p>
+							<p><a href="tel:+380730325033">+3 8(073)-032-50-33</a></p>
 						</li>
 						<li className="content-list__item">
 							<h2 className="title-2">Email</h2>
-							<p><a href="mailto:webdev@somemail.com">webdev@somemail.com</a></p>
+							<p><a href="mailto:koydano@gmail.com">koydano@gmail.com</a></p>
 						</li>
 					</ul>
 

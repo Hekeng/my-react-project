@@ -35,7 +35,40 @@ React.createElement(type, props, children)
 e.target.value      // текст в input
 e.target.checked    // checkbox
 e.preventDefault()  // отмена submit
+//////////////////////////////////////////////////////
+Режим обучения:
+шаг = X
+формат = теория | пример | задание
+скорость = медленно
 
+
+1 — JSX как синтаксис
+2 — компоненты
+3 — props
+4 — children
+5 — списки
+6 — события
+7 — state ← только здесь
+8 — эффекты
+9 — архитектура
+10 — роутер
+11 — оптимизация
+
+array.map((element, index, array) => {
+   return новоеЗначение
+})
+
+Параметры callback
+аргумент	что это
+element	текущий элемент
+index	индекс
+array	исходный массив
+
+
+
+
+
+///////////////////////////////////////////////
 План изучения TypeScript + React стек
 Часть 1: Основы TypeScript
 
