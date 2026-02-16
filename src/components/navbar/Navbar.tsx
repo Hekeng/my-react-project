@@ -1,9 +1,9 @@
 import './navbarStyle.css'
-import sun from '../../assets/img/icons/sun.svg'
-import moon from '../../assets/img/icons/moon.svg'
+
 import NavItem from './NavItem';
 
 import {menuItems} from '../../healpers/ProjectsList'
+import DarkModeBtn from '../darkModeBtn/DarkModeBtn ';
 
 const Navbar = () => {
 	return (  
@@ -11,11 +11,9 @@ const Navbar = () => {
 			<div className="container">
 				<div className="nav-row">
 					<a href="./index.html" className="logo"><strong>Deweloper</strong> portfolio</a>
+					
+					<DarkModeBtn/>
 
-					<button className="dark-mode-btn">
-						<img src={sun} alt="Light mode" className="dark-mode-btn__icon"/>
-						<img src={moon} alt="Dark mode" className="dark-mode-btn__icon"/>
-					</button>
 					<ul className="nav-list"> 
 						{
 							menuItems.map((menuItem)=> {

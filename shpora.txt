@@ -35,6 +35,16 @@ React.createElement(type, props, children)
 e.target.value      // текст в input
 e.target.checked    // checkbox
 e.preventDefault()  // отмена submit
+
+localStorage: 
+Метод	            Что делает	                Пример
+setItem(key, value)	сохраняет значение	        localStorage.setItem('theme', 'dark')
+getItem(key)	    получает значение	        localStorage.getItem('theme') → 'dark'
+removeItem(key)	    удаляет ключ	            localStorage.removeItem('theme')
+clear()	            чистит всё	                localStorage.clear()
+
+💡 Значение всегда строка. Если хочешь хранить объекты, нужно использовать JSON.stringify() / JSON.parse().
+
 //////////////////////////////////////////////////////
 Режим обучения:
 шаг = X
