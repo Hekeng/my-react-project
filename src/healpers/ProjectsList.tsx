@@ -88,6 +88,62 @@ const menuItems = [
   	{ path: '/contacts', label: 'Contacts' },
   	{ path: '/skills', label: 'Skills' },
   
-];
+]
 
-export {projectsData, menuItems}
+const Skills = [
+	{
+		skillName: "JavaScript",
+		skillImg: ""
+
+	},
+	{
+		skillName: "React",
+		skillImg: ""
+	},
+	{
+		skillName: "Node.js",
+		skillImg: ""
+	},
+	{
+		skillName: "MongoDB",
+		skillImg: ""
+	},
+	{
+		skillName: "TypeScript",
+		skillImg: ""
+	},
+	{
+		skillName: "Php",
+		skillImg: ""
+	},
+		{
+		skillName: "Laravel",
+		skillImg: ""
+	},
+	{
+		skillName: "CSS3",
+		skillImg: ""
+	},
+		{
+		skillName: "Tailwindcss",
+		skillImg: ""
+	},
+
+]
+
+
+// const SkillName = {
+
+//     JS: 'JavaScript',
+// 	REACT: 'React',
+//     NODE: 'Node.js',
+//     MONGO: 'MongoDB',
+//     TS: 'TypeScript',
+// 	PHP: 'Php',
+// 	Lara: 'Laravel',
+//     CSS: 'CSS3',
+// 	TAIL: 'Tailwindcss'
+
+// } as const;
+
+export {projectsData, menuItems, Skills}
