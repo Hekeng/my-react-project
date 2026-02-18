@@ -1,4 +1,4 @@
-import './footerStyle.css'
+// import './footerStyle.css'
 
 import vk from '../../assets/img/icons/vk.svg'
 import git from '../../assets/img/icons/gitHub.svg'

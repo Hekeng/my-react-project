@@ -18,119 +18,106 @@ import project06Big from '../assets/img/projects/06-big.jpg'
 
 const projectsData = [
 	{
-		id: "01",
+		id: '01',
 		title: 'Gaming streaming portal',
 		path: 'gaming_streaming_portal',
 		skills: 'React, Node.js, MongoDB',
 		img: project01,
 		bigImg: project01Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
+		gitHub: '',
 	},
 	{
-		id: "02",
+		id: '02',
 		title: 'Video service',
 		path: 'video_sevice',
 		skills: 'React, Node.js, MongoDB',
 		img: project02,
 		bigImg: project02Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
+		gitHub: '',
 	},
 	{
-		id: "03",
+		id: '03',
 		title: 'Video portal',
 		path: 'video_portal',
 		skills: 'React, Node.js, MongoDB',
 		img: project03,
 		bigImg: project03Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
+		gitHub: '',
 	},
 	{
-		id: "04",
+		id: '04',
 		title: 'Dating app',
 		path: 'dating_app',
 		skills: 'React, Node.js, MongoDB',
 		img: project04,
 		bigImg: project04Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
+		gitHub: '',
 	},
 	{
-		id: "05",
+		id: '05',
 		title: 'Landing',
 		path: 'landing',
 		skills: 'React, Node.js, MongoDB',
 		img: project05,
 		bigImg: project05Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
+		gitHub: '',
 	},
 	{
-		id: "06",
+		id: '06',
 		title: 'Gaming community',
 		path: 'gaming_community',
 		skills: 'React, Node.js, MongoDB',
 		img: project06,
 		bigImg: project06Big,
-		gitHub: 'https://github.com/Hekeng/my-react-project'
-
-	}
+		gitHub: '',
+	},
 ]
 
-
-
 const menuItems = [
-	
 	{ path: '/', label: 'Home' },
-  	{ path: '/projects', label: 'Projects' },
-  	{ path: '/contacts', label: 'Contacts' },
-  	{ path: '/skills', label: 'Skills' },
-  
+	{ path: '/projects', label: 'Projects' },
+	{ path: '/contacts', label: 'Contacts' },
+	{ path: '/skills', label: 'Skills' },
 ]
 
 const Skills = [
 	{
-		skillName: "JavaScript",
-		skillImg: ""
-
+		skillName: 'JavaScript',
+		skillImg: '',
 	},
 	{
-		skillName: "React",
-		skillImg: ""
+		skillName: 'React',
+		skillImg: '',
 	},
 	{
-		skillName: "Node.js",
-		skillImg: ""
+		skillName: 'Node.js',
+		skillImg: '',
 	},
 	{
-		skillName: "MongoDB",
-		skillImg: ""
+		skillName: 'MongoDB',
+		skillImg: '',
 	},
 	{
-		skillName: "TypeScript",
-		skillImg: ""
+		skillName: 'TypeScript',
+		skillImg: '',
 	},
 	{
-		skillName: "Php",
-		skillImg: ""
-	},
-		{
-		skillName: "Laravel",
-		skillImg: ""
+		skillName: 'Php',
+		skillImg: '',
 	},
 	{
-		skillName: "CSS3",
-		skillImg: ""
+		skillName: 'Laravel',
+		skillImg: '',
 	},
-		{
-		skillName: "Tailwindcss",
-		skillImg: ""
+	{
+		skillName: 'CSS3',
+		skillImg: '',
 	},
-
+	{
+		skillName: 'Tailwindcss',
+		skillImg: '',
+	},
 ]
-
 
 // const SkillName = {
 
@@ -146,4 +133,4 @@ const Skills = [
 
 // } as const;
 
-export {projectsData, menuItems, Skills}
+export { projectsData, menuItems, Skills }

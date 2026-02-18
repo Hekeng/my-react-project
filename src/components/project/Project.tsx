@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import { projectsData } from '../../healpers/ProjectsList'
-import './projectStyle.css'
+// import './projectStyle.css'
 
 
 

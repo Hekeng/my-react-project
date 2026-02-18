@@ -1,15 +1,8 @@
-import Header from "../components/header/Header";
-import { Skills } from "../healpers/ProjectsList";
-
-
+import Header from '../components/Hero/Hero'
+import { Skills } from '../healpers/ProjectsList'
 
 const SkillsPage = () => {
-	return ( 
-		<Header />
-	 )
+	return <Header />
 }
 
-
-
-
-export default SkillsPage;
+export default SkillsPage

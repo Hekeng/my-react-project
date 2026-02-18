@@ -1,48 +1,44 @@
 // import React from 'react'
 
-import ExternalLinkButton from "../components/ExternalLinkButton/ExternalLinkButton"
+import ExternalLinkButton from '../components/ExternalLinkButton/ExternalLinkButton'
 
-import {projectsData} from '../healpers/ProjectsList'
-import { useParams } from "react-router-dom"
-import Page404 from "./Page404";
+import { projectsData } from '../healpers/ProjectsList'
+import { useParams } from 'react-router-dom'
+import Page404 from './Page404'
 
+const ProjectsPage = () => {
+	const { projectPath } = useParams()
+	const item = projectsData.find((element) => projectPath === element.path)
 
-
-
-
-const ProjectsPage = () => 	{
-
-		const { projectPath } = useParams(); 
-		const item = projectsData.find(element => projectPath ===  element.path);
-
-		if (item) {
-			
-		
+	if (item) {
 		return (
-			<div className="container">
-				<div className="project-details">
+			<div className='container'>
+				<div className='project-details'>
+					<h1 className='title-1'>{item.title}</h1>
 
-					<h1 className="title-1">{item.title}</h1>
+					<img
+						src={item.bigImg}
+						alt=''
+						className='project-details__cover'
+					/>
 
-					<img src={item.bigImg} alt="" className="project-details__cover"/>
-
-					<div className="project-details__desc">
+					<div className='project-details__desc'>
 						<p>{item.skills}</p>
 					</div>
 
+					{
+						// item.gitHub &&
 						<ExternalLinkButton
 							url={item.gitHub}
-							text="Repository"
+							text='Repository'
 						/>
+					}
 				</div>
 			</div>
-	 )
-	 } else {
-
+		)
+	} else {
 		return <Page404 />
-
-	 }
-
+	}
 }
- 
+
 export default ProjectsPage
