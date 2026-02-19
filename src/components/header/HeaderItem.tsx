@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { NavLink } from 'react-router-dom'
 
 type NavItemProps = {
@@ -10,9 +11,11 @@ const HeaderItem = ({ to, children }: NavItemProps) => (
 		<NavLink
 			to={to}
 			className={({ isActive }) =>
-				isActive
-					? 'nav-list__link nav-list__link--active'
-					: 'nav-list__link'
+				cn(
+					'nav-list__link text-primary duration-default ease-soft transition-opacity hover:opacity-80',
+					isActive &&
+						'nav-list__link--active before:bg-accent relative before:absolute before:top-full before:left-0 before:block before:h-[0.1rem] before:w-full'
+				)
 			}
 		>
 			{children}

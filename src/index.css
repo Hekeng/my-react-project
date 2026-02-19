@@ -3,6 +3,7 @@
 @import 'shadcn/tailwind.css';
 
 @custom-variant dark (&:is(.dark *));
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 html {
 	font-size: clamp(62.5%, 0.625rem + 0.2vw, 150%);
@@ -22,12 +23,12 @@ body {
 	--radius: 1rem;
 	/* base */
 	--background: oklch(1 0 0);
-	--foreground: oklch(0.141 0.005 285.823);
+	--foreground: oklch(0.21 0.02 260);
 	/* surfaces */
 	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.141 0.005 285.823);
+	--card-foreground: oklch(0.21 0.02 260);
 	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.141 0.005 285.823);
+	--popover-foreground: oklch(0.21 0.02 260);
 	/* brand */
 	--primary: oklch(0.586 0.253 17.585);
 	--primary-foreground: oklch(0.969 0.015 12.422);
@@ -46,7 +47,7 @@ body {
 	--chart-4: oklch(0.514 0.222 16.935);
 	--chart-5: oklch(0.455 0.188 13.697);
 	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.141 0.005 285.823);
+	--sidebar-foreground: oklch(0.21 0.02 260);
 	--sidebar-primary: oklch(0.586 0.253 17.585);
 	--sidebar-primary-foreground: oklch(0.969 0.015 12.422);
 	--sidebar-accent: oklch(0.967 0.001 286.375);
@@ -118,7 +119,7 @@ body {
    ========================================================= */
 
 .dark {
-	--background: oklch(0.141 0.005 285.823);
+	--background: oklch(0.21 0.02 260);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.21 0.006 285.885);
 	--card-foreground: oklch(0.985 0 0);
@@ -153,7 +154,7 @@ body {
 
 @theme inline {
 	/* ---------- TYPOGRAPHY SCALE ---------- */
-
+	--font-poppins: 'Poppins', sans-serif;
 	/* Headings */
 	--font-h1: var(--font-h1); /* h1 size */
 	--font-h2: var(--font-h2);
@@ -215,6 +216,8 @@ body {
 	/* ---------- TRANSITIONS ---------- */
 	--default-transition-duration: var(--transition-duration-base);
 	--default-transition-timing-function: var(--transition-timing-soft);
+	--duration-default: var(--transition-duration-base);
+	--ease-soft: var(--transition-timing-soft);
 
 	/* ---------- TRANSFORMS ---------- */
 	--button-scale-hover: var(--scale-hover);
