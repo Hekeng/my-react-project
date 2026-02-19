@@ -36,7 +36,23 @@ const Sun = ({ className }) => (
 	</svg>
 )
 
+const DownloadIcon = ({ className }) => (
+	<svg
+		viewBox='0 0 24 24'
+		fill='none'
+		stroke='currentColor'
+		stroke-width='2'
+		stroke-linecap='round'
+		stroke-linejoin='round'
+		className='h-5 w-5 transition-all duration-300'
+	>
+		<path d='M12 15V3' className='animate-bounce-subtle' />
+		<path d='m8 11 4 4 4-4' />
+		<path d='M19 15v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4' />
+	</svg>
+)
+
 // 	  );
 // }
 
-export { Sun, Moon }
+export { Sun, Moon, DownloadIcon }

@@ -1,11 +1,13 @@
-import Header from '../components/Hero/Hero'
+import Hero from '../components/Hero/Hero'
 
 const HomePage = () => {
 	return (
 		<>
-			<Header />
-			<h1>Test Home Page</h1>
-			<p className='bg-red-500 p-10 text-white'>
+			<Hero />
+			<h1 className=''>Test Home Page</h1>
+
+			{/* bg-red-500 p-10 text-white */}
+			<p className=''>
 				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
 				temporibus, fuga dignissimos quidem qui eos blanditiis,
 				reprehenderit voluptatibus veniam, cum inventore! Eum a

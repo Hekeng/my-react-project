@@ -10,9 +10,7 @@ const Header = () => {
 	return (
 		<header
 			className={cn([
-				`nav border-dark bg-foreground text-primary border-b border-solid px-[3rem] py-[0.5rem] tracking-normal`,
-				// 'ins sticky inset-x-0 top-0 inline-flex flex-row items-center justify-center',
-				// `border-b-border-dark bg-foreground border px-[3rem] text-primary`,
+				`nav border-dark bg-background text-primary border-b border-solid px-[3rem] py-[0.5rem] tracking-normal`,
 			])}
 		>
 			{/* <div className="container"> */}

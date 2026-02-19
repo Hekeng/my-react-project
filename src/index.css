@@ -82,9 +82,9 @@ body {
 	--font-h1: clamp(3.6rem, 5vw, 4.8rem);
 	--font-h2: clamp(2.8rem, 4vw, 3.6rem);
 	--font-h3: clamp(2.4rem, 3vw, 3.2rem);
-	/* --font-h4: clamp(2rem, 2.5vw, 2.8rem);
+	--font-h4: clamp(2rem, 2.5vw, 2.8rem);
 	--font-h5: clamp(1.6rem, 2vw, 2.4rem);
-	--font-h6: clamp(1.4rem, 1.5vw, 2rem); */
+	--font-h6: clamp(1.4rem, 1.5vw, 2rem);
 
 	/* Body / text */
 	--font-body: clamp(1.4rem, 1.4vw, 1.6rem); /* ≈ 14-16px */
@@ -112,6 +112,21 @@ body {
 	--scale-hover: 1.05; /* увеличиваем на 5% при наведении */
 	--scale-active: 0.95; /* сжимаем на 5% при нажатии */
 	--translate-active-y: 2px; /* немного опускаем при клике */
+	/*-----------------surfaces---------------------------*/
+	/* 1. Текстура шума (SVG в кодировке base64) */
+	/* --noise-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' fill-opacity='0.005'/%3E%3C/svg%3E"); */
+
+	/* 2. Мягкий градиент (белый прозрачный сверху вниз) */
+	/* --subtle-grad: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0.05) 0%,
+		rgba(255, 255, 255, 0) 100%
+	); */
+
+	/* 3. Специфическая тень (Shadow Overlay) */
+	/* --shadow-overlay:
+		inset 0 1px 1px 0 rgba(255, 255, 255, 0.1),
+		0 10px 20px -5px rgba(0, 0, 0, 0.2); */
 }
 
 /* =========================================================
@@ -150,22 +165,28 @@ body {
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.41 0.159 10.272);
+	--subtle-grad: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.1) 0%,
+		rgba(0, 0, 0, 0) 100%
+	);
 }
 
 @theme inline {
+	/* --background-image-header: url('/src/assets/img/header-bg.png'); */
 	/* ---------- TYPOGRAPHY SCALE ---------- */
 	--font-poppins: 'Poppins', sans-serif;
 	/* Headings */
-	--font-h1: var(--font-h1); /* h1 size */
-	--font-h2: var(--font-h2);
-	--font-h3: var(--font-h3);
-	/* --font-h4: var(--font-h4:); 
-	--font-h5: var(--font-h5:); 
-	--font-h6: var(--font-h6:);  */
+	--text-h1: var(--font-h1);
+	--text-h2: var(--font-h2);
+	--text-h3: var(--font-h3);
+	--text-h4: var(--font-h4);
+	--text-h5: var(--font-h5);
+	--text-h6: var(--font-h6);
 
 	/* Body / text */
-	--font-body: var(--font-body);
-	--font-small: var(--font-small);
+	--text-body: var(--font-body);
+	--text-small: var(--font-small);
 
 	/* ---------- RADIUS SCALE ---------- */
 	/* used by buttons, cards, inputs */
@@ -223,6 +244,13 @@ body {
 	--button-scale-hover: var(--scale-hover);
 	--button-scale-active: var(--scale-active);
 	--button-translate-active-y: var(--translate-active-y);
+
+	/*-----------------surfaces---------------------------*/
+
+	/* --background-image-surface-mixed: var(--noise-texture), var(--subtle-grad); */
+
+	/* Пробрасываем нашу сложную тень */
+	/* --shadow-premium: var(--shadow-overlay); */
 }
 
 @layer base {

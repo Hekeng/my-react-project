@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
-import gitHubBlack from '../../assets/img/icons/gitHub-black.svg'
 import { buttonVariants } from '@/components/ui/button'
+import { DownloadIcon } from 'lucide-react'
 
 type Props = {
 	url: string
 	text: string
 }
 
-const ExternalLinkButton = ({ url, text }: Props) => {
+const DownloadButton = ({ url, text }: Props) => {
 	return (
 		<Link
 			to={
@@ -21,10 +21,11 @@ const ExternalLinkButton = ({ url, text }: Props) => {
 				// className: "!bg-[var(--chart-4)] !text-[var(--white)] hover:!bg-[var(--chart-3)]"
 			})}
 		>
-			<img src={gitHubBlack} alt='GitHub icon' />
-			{text}
+			<DownloadIcon />
+			{/* <img src={DownloadIcon} alt='Download' /> */}
+			Download CV
 		</Link>
 	)
 }
 
-export default ExternalLinkButton
+export default DownloadButton
