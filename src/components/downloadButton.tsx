@@ -3,8 +3,8 @@ import { buttonVariants } from '@/components/ui/button'
 import { DownloadIcon } from 'lucide-react'
 
 type Props = {
-	url: string
-	text: string
+	url?: string
+	text?: string
 }
 
 const DownloadButton = ({ url, text }: Props) => {
@@ -23,7 +23,7 @@ const DownloadButton = ({ url, text }: Props) => {
 		>
 			<DownloadIcon />
 			{/* <img src={DownloadIcon} alt='Download' /> */}
-			Download CV
+			Download
 		</Link>
 	)
 }

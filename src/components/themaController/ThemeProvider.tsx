@@ -15,6 +15,7 @@ interface ThemeProviderProps {
 }
 // 3. Компонент-провайдер. ОБЯЗАТЕЛЬНО принимаем { children }
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
+	
 	const [isDark, setIsDark] = React.useState(isSystemDark)
 
 	// Функция-переключатель. Теперь она простая как дверь.

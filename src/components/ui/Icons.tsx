@@ -1,6 +1,13 @@
 // const Icons = () => {
+
+import { cn } from '@/lib/utils'
+
+interface IconsProps {
+	className?: string
+}
+
 // 	return (
-const Moon = ({ className }) => (
+const Moon = ({ className }: IconsProps) => (
 	<svg
 		viewBox='0 0 16 16'
 		fill='none'
@@ -20,7 +27,7 @@ const Moon = ({ className }) => (
 	</svg>
 )
 
-const Sun = ({ className }) => (
+const Sun = ({ className }: IconsProps) => (
 	<svg
 		viewBox='0 0 16 16'
 		fill='none'
@@ -36,7 +43,7 @@ const Sun = ({ className }) => (
 	</svg>
 )
 
-const DownloadIcon = ({ className }) => (
+const DownloadIcon = ({ className }: IconsProps) => (
 	<svg
 		viewBox='0 0 24 24'
 		fill='none'
@@ -44,13 +51,34 @@ const DownloadIcon = ({ className }) => (
 		stroke-width='2'
 		stroke-linecap='round'
 		stroke-linejoin='round'
-		className='h-5 w-5 transition-all duration-300'
+		className={cn('h-5 w-5 transition-all duration-300', { className })}
 	>
 		<path d='M12 15V3' className='animate-bounce-subtle' />
 		<path d='m8 11 4 4 4-4' />
 		<path d='M19 15v4a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-4' />
 	</svg>
 )
+
+// <defs>
+// 	{/* <!-- настройки --> */}
+// 	<style>
+// 	.shape {
+// 		fill: none;
+// 		stroke: white;
+// 		stroke-width: 2;
+// 		transform-origin: 300px 300px;
+// 	}
+// 	</style>
+// </defs>
+
+// 		.shape {
+//   animation: spin 20s linear infinite;
+// }
+// @keyframes spin {
+//   from { transform: rotate(0deg); }
+//   to   { transform: rotate(360deg); }
+// }
+// prettier-ignore
 
 // 	  );
 // }

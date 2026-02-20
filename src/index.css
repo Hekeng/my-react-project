@@ -262,3 +262,16 @@ body {
 		@apply bg-background text-foreground;
 	}
 }
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.shape {
+	animation: fade-out 2s linear forwards;
+}

@@ -4,18 +4,14 @@ import { cn } from '@/lib/utils'
 import headerBg from '@/assets/img/header-bg.png'
 import { Link } from 'react-router-dom'
 import DownloadButton from '../downloadButton'
+import HeroBackground from '../ui/HeroBackground'
 
 const Hero = () => {
 	return (
-		<div
-			style={{
-				backgroundImage: `url(${headerBg})`,
-			}}
-			className={cn([
-				'header bg-foreground text-background flex items-center justify-center bg-auto bg-center bg-no-repeat py-[4rem] text-center',
-			])}
-		>
+		<div className='header bg-foreground text-background flex items-center justify-center bg-auto bg-center bg-no-repeat py-[4rem] text-center'>
 			<div className='header__wrapper max-w-[66rem] px-[1.5rem]'>
+				<HeroBackground className='text-background opacity-10' />
+
 				<h1 className='header__title text-h1 mb-[2rem] leading-[1.4] font-bold'>
 					<strong className='text-[6rem] font-bold'>
 						Hi, my name is{' '}
@@ -26,7 +22,7 @@ const Hero = () => {
 				<div className='header__text mb-[4rem] space-y-[0.5em] text-[2rem] leading-[1.333]'>
 					<p>with passion for learning and creating.</p>
 				</div>
-					<DownloadButton />
+				<DownloadButton />
 			</div>
 		</div>
 	)
