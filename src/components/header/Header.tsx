@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import NavItem from './HeaderItem'
 
-import { menuItems } from '../../healpers/ProjectsList'
+import { menuItems } from '../helpers/ProjectsList'
 import DarkModeBtn from '../darkModeBtn/DarkModeBtn'
 
 const Header = () => {

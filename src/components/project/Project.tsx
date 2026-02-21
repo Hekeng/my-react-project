@@ -1,11 +1,15 @@
 
 import { Link } from 'react-router-dom'
-import { projectsData } from '../../healpers/ProjectsList'
+// import { projectsData } from '@/components/healpers/ProjectsList'
 // import './projectStyle.css'
 
+interface ProjectProps {
+    title: string;
+    img: string;
+    path: string;
+}
 
-
-const Projects = ({title, img, path}) => {
+const Projects = ({title, img, path}:ProjectProps) => {
 	return ( 
 		<li className="project">
 			<Link to={path}>

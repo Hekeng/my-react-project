@@ -273,5 +273,9 @@ body {
 }
 
 .shape {
-	animation: fade-out 2s linear forwards;
+	animation: fade-out 5s linear forwards;
+}
+
+.shape.active{
+	color: red;
 }

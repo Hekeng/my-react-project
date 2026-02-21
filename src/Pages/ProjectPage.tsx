@@ -2,7 +2,7 @@
 
 import ExternalLinkButton from '../components/ExternalLinkButton/ExternalLinkButton'
 
-import { projectsData } from '../healpers/ProjectsList'
+import { projectsData } from '../components/helpers/ProjectsList'
 import { useParams } from 'react-router-dom'
 import Page404 from './Page404'
 

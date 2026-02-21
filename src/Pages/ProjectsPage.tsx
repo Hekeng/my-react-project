@@ -1,6 +1,6 @@
 import Header from '../components/Hero/Hero'
 import Project from '../components/project/Project'
-import { projectsData } from '../healpers/ProjectsList'
+import { projectsData } from '../components/helpers/ProjectsList'
 
 const ProjectsPage = () => {
 	return (
