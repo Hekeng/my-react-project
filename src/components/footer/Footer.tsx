@@ -1,30 +1,24 @@
-// import './footerStyle.css'
+import { cn } from '@/lib/utils'
+import Socials from '@/components/socials/Socials'
 
-import vk from '../../assets/img/icons/vk.svg'
-import git from '../../assets/img/icons/gitHub.svg'
+interface footerProps{
+	className: string,
+}
 
-const Footer = () => {
+
+const Footer = ({className}:footerProps ) => {
 	return ( 
-		<footer className="footer">
-			<div className="container">
-				<div className="footer__wrapper">
-					<ul className="social">
-						<li className="social__item">
-							<a href="#!">
-								<img src={vk} alt="Link"/>
-							</a>
-						</li>
-						<li className="social__item">
-							<a href="#!">
-								<img src={git} alt="Link"/>
-							</a>
-						</li>
+		<footer className={cn('footer', className)}>
+			{/* <div className="container"> */}
+				<div className="footer__wrapper flex flex-col items-center gap-x-[3rem]">
+					<ul className="social flex gap-y-[3rem] gap-x-[1rem] items-center ">
+						<Socials className='w-4 h-4 text-background' />
 					</ul>
-					<div className="copyright">
-						<p>© webdev-freelancer.com</p>
+					<div className="copyright text-small ">
+						<p>© hexen</p>
 					</div>
 				</div>
-			</div>
+			{/* </div> */}
 		</footer>
 	 );
 }

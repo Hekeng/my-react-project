@@ -42,7 +42,6 @@ useEffect(() => {
 		<>
 		
 			<svg
-				xmlns='http://www.w3.org/2000/svg'
 				stroke='currentColor'
 				className={cn(
 					// 'bg-foreground text-background relative flex items-center justify-center bg-auto bg-center bg-no-repeat py-[4rem] text-center',

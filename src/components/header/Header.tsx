@@ -6,11 +6,17 @@ import NavItem from './HeaderItem'
 import { menuItems } from '../helpers/ProjectsList'
 import DarkModeBtn from '../darkModeBtn/DarkModeBtn'
 
-const Header = () => {
+
+interface headerProps{
+	className: string
+}
+
+const Header = ({className}:headerProps) => {
 	return (
 		<header
 			className={cn([
-				`nav border-dark bg-background text-primary border-b border-solid px-[3rem] py-[0.5rem] tracking-normal`,
+				`nav `,
+				className
 			])}
 		>
 			{/* <div className="container"> */}

@@ -21,6 +21,7 @@ body {
 
 :root {
 	--radius: 1rem;
+	--spacing: 1rem;
 	/* base */
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.21 0.02 260);
@@ -170,6 +171,14 @@ body {
 		rgba(0, 0, 0, 0.1) 0%,
 		rgba(0, 0, 0, 0) 100%
 	);
+		/* ---------- SHADOW SCALE ---------- */
+	/* Используются как shadow-xs, shadow-soft, shadow-card */
+	--shadow-xs: 0 1px 2px 0 oklch(94.619% 0.00429 15.852 / 0.712);
+	--shadow-soft:
+		0 4px 6px -1px oklch(94.619% 0.00429 15.852 / 0.712), 0 2px 4px -2px oklch(94.619% 0.00429 15.852 / 0.432);
+	--shadow-card:
+		0 10px 15px -3px oklch(94.619% 0.00429 15.852 / 0.712), 0 4px 6px -4px oklch(94.619% 0.00429 15.852 / 0.432);
+	--shadow-inner: inset 0 2px 4px 0 oklch(94.619% 0.00429 15.852 / 0.712);
 }
 
 @theme inline {
@@ -274,8 +283,4 @@ body {
 
 .shape {
 	animation: fade-out 5s linear forwards;
-}
-
-.shape.active{
-	color: red;
 }

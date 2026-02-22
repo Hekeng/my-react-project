@@ -9,7 +9,7 @@ interface oneSquareProps {
 
 const OneSquare = ({ delay, rotate, className }: oneSquareProps) => {
 
-	const [colorClassName, setColorClassName] = useState('active')
+	const [colorClassName, setColorClassName] = useState('text-primary ')
 
 	function changeColor () {
 		setColorClassName(()=> {
@@ -37,7 +37,7 @@ const OneSquare = ({ delay, rotate, className }: oneSquareProps) => {
 			style={{
 				stroke: 'currentColor',
 				fill: 'none',
-				strokeWidth: '1',
+				strokeWidth: '1.5',
 				animationDelay: delay, 
 			}}
 		/>

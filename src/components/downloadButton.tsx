@@ -1,31 +1,21 @@
 import { Link } from 'react-router-dom'
-import { buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button' // Импортируем сам компонент
 import { DownloadIcon } from 'lucide-react'
 
 type Props = {
-	url?: string
-	text?: string
+    url?: string
+    text?: string
 }
 
-const DownloadButton = ({ url, text }: Props) => {
-	return (
-		<Link
-			to={
-				url
-				// || '#'
-			}
-			onClick={(e) => !url && e.preventDefault()}
-			className={buttonVariants({
-				variant: 'default',
-				size: 'lg',
-				// className: "!bg-[var(--chart-4)] !text-[var(--white)] hover:!bg-[var(--chart-3)]"
-			})}
-		>
-			<DownloadIcon />
-			{/* <img src={DownloadIcon} alt='Download' /> */}
-			Download
-		</Link>
-	)
+const DownloadButton = ({ url = '#', text = 'Download' }: Props) => {
+    return (
+        <Button asChild variant="default" size="lg">
+            <Link to={url} onClick={(e) => url === '#' && e.preventDefault()}>
+                <DownloadIcon /> {/* Иконка сама подхватит размер из buttonVariants */}
+                {text}
+            </Link>
+        </Button>
+    )
 }
 
 export default DownloadButton

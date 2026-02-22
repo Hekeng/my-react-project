@@ -1,9 +1,11 @@
 /* Footer */
 
 .footer {
+	position: relative;
+	z-index: 1000;
 	margin-top: auto;
 	padding: 60px 0 50px;
-	background-color: var(--dark-bg);
+	background-color: black;
 	color: var(--header-text);
 }
 
