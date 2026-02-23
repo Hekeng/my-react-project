@@ -93,12 +93,20 @@ body {
 
 	/* ---------- SHADOW SCALE ---------- */
 	/* Используются как shadow-xs, shadow-soft, shadow-card */
-	--shadow-xs: 0 1px 2px 0 oklch(0 0 0 / 0.05);
+	--btn-shadow-light-strong: oklch(0 0 0 / 0.18);
+	--btn-shadow-light-soft: oklch(0 0 0 / 0.08);
+
+	--btn-shadow-dark-strong: oklch(1 0 0 / 0.18);
+	--btn-shadow-dark-soft: oklch(1 0 0 / 0.08);
+
+	--btn-shadow-layer1: 0 3px 4px;
+	--btn-shadow-layer2: 0 2px 8px;
+	/* --shadow-xs: 0 1px 2px 0 oklch(0 0 0 / 0.05);
 	--shadow-soft:
 		0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -2px oklch(0 0 0 / 0.1);
 	--shadow-card:
 		0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -4px oklch(0 0 0 / 0.1);
-	--shadow-inner: inset 0 2px 4px 0 oklch(0 0 0 / 0.06);
+	--shadow-inner: inset 0 2px 4px 0 oklch(0 0 0 / 0.06); */
 
 	/* ---------- ANIMATION & TRANSITION ---------- */
 	/* Длительность: transition-fast, transition-slow */
@@ -171,14 +179,11 @@ body {
 		rgba(0, 0, 0, 0.1) 0%,
 		rgba(0, 0, 0, 0) 100%
 	);
-		/* ---------- SHADOW SCALE ---------- */
-	/* Используются как shadow-xs, shadow-soft, shadow-card */
-	--shadow-xs: 0 1px 2px 0 oklch(94.619% 0.00429 15.852 / 0.712);
-	--shadow-soft:
-		0 4px 6px -1px oklch(94.619% 0.00429 15.852 / 0.712), 0 2px 4px -2px oklch(94.619% 0.00429 15.852 / 0.432);
-	--shadow-card:
-		0 10px 15px -3px oklch(94.619% 0.00429 15.852 / 0.712), 0 4px 6px -4px oklch(94.619% 0.00429 15.852 / 0.432);
-	--shadow-inner: inset 0 2px 4px 0 oklch(94.619% 0.00429 15.852 / 0.712);
+	--btn-shadow-light-strong: oklch(1 0 0 / 0.18);
+	--btn-shadow-light-soft: oklch(1 0 0 / 0.08);
+
+	--btn-shadow-dark-strong: oklch(0 0 0 / 0.18);
+	--btn-shadow-dark-soft: oklch(0 0 0 / 0.08);
 }
 
 @theme inline {
@@ -240,8 +245,14 @@ body {
 	--color-input: var(--input);
 	--color-ring: var(--ring);
 	/* ---------- SHADOWS ---------- */
-	--shadow-soft: var(--shadow-soft);
-	--shadow-card: var(--shadow-card);
+	/* кнопка на светлой поверхности */
+	--shadow-btn-on-light:
+		var(--btn-shadow-layer1) var(--btn-shadow-light-strong),
+		var(--btn-shadow-layer2) var(--btn-shadow-light-soft);
+
+	--shadow-btn-on-dark:
+		var(--btn-shadow-layer1) var(--btn-shadow-dark-strong),
+		var(--btn-shadow-layer2) var(--btn-shadow-dark-soft);
 
 	/* ---------- TRANSITIONS ---------- */
 	--default-transition-duration: var(--transition-duration-base);

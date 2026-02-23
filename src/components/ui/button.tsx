@@ -7,13 +7,13 @@ import { cn } from '@/lib/utils'
 const buttonVariants = cva(
 	[
 		// 1. Base
-		`inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap border border-background/50 `,
+		`border-background/50 inline-flex shrink-0 items-center justify-center gap-2 border whitespace-nowrap`,
 		// 2. Form
-		`rounded-md text-body transition-all outline-none`,
-		 // 3. Focus
+		`text-body rounded-md transition-all outline-none`,
+		// 3. Focus
 		`focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]`,
 		//hover
-		`hover:bg-secondary/80 hover:shadow-soft hover:-translate-y-0.5`,
+		`hover:bg-secondary/80 hover:shadow-btn-on-dark hover:-translate-y-[0.2rem]`,
 
 		//active
 		`active:translate-y-0 active:shadow-none`,
@@ -37,12 +37,12 @@ const buttonVariants = cva(
 				default: `h-[4.5rem] px-4 py-2 has-[>svg]:px-3`,
 				xs: `h-2 gap-1 rounded-md px-2 text-xs has-[>svg]:px-1.5 [&_svg:not([class*='size-'])]:size-3`,
 				sm: `h-3 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5`,
-				lg: `h-4 rounded-md px-5 text-body font-medium has-[>svg]:px-2`,
+				lg: `text-body h-4 rounded-md px-5 font-medium has-[>svg]:px-2`,
 				icon: `size-9`,
-					'icon-xs':
-						"size-6 rounded-md [&_svg:not([class*='size-'])]:size-3",
-					'icon-sm': 'size-8',
-					'icon-lg': 'size-10',
+				'icon-xs':
+					"size-6 rounded-md [&_svg:not([class*='size-'])]:size-3",
+				'icon-sm': 'size-8',
+				'icon-lg': 'size-10',
 			},
 		},
 		defaultVariants: {
@@ -51,7 +51,6 @@ const buttonVariants = cva(
 		},
 	}
 )
-
 
 function Button({
 	className,

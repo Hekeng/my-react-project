@@ -13,11 +13,9 @@ function App() {
 			<BrowserRouter>
 				<ThemeProvider>
 					<div className='bg-background text-foreground selection:bg-primary/30 flex min-h-screen flex-col'>
-						<Header className='border-dark bg-background text-primary border-b border-solid px-[3rem] py-[0.5rem] tracking-normal sticky top-0 z-[1000]'/>
-						<main className='flex flex-col flex-1'>
+						<Header className='border-dark bg-background text-primary sticky top-0 z-[1000] border-b border-solid px-[3rem] py-[0.5rem] tracking-normal' />
 							<RouterWrapper />
-						</main>
-						<Footer className='relative z-1000 mt-auto py-[2rem] bg-foreground text-background ' />
+						<Footer className='bg-foreground text-background relative z-1000 mt-auto py-[2rem]' />
 					</div>
 				</ThemeProvider>
 			</BrowserRouter>
