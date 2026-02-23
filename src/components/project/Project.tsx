@@ -12,10 +12,16 @@ interface ProjectProps {
 
 const Projects = ({ title, img, path, className }: ProjectProps) => {
 	return (
-		<li className={cn(`${className} flex-grow`)}>
+		<li className={cn(`${className} `)}>
 			<Link to={path}>
-				<img src={img} alt='Project img' className='project__img' />
-				<h3 className='project__title'>{title}</h3>
+				<img
+					src={img}
+					alt='Project img'
+					className='project__img rounded-[1rem]'
+				/>
+				<h3 className='project__title text-h5 p-[2rem] text-center font-bold '>
+					{title}
+				</h3>
 			</Link>
 		</li>
 	)

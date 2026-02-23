@@ -18,7 +18,6 @@ const ExternalLinkButton = ({ url, text }: Props) => {
 			className={buttonVariants({
 				variant: 'default',
 				size: 'lg',
-				// className: "!bg-[var(--chart-4)] !text-[var(--white)] hover:!bg-[var(--chart-3)]"
 			})}
 		>
 			<img src={gitHubBlack} alt='GitHub icon' />

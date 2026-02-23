@@ -8,8 +8,10 @@ const ProjectsPage = () => {
 		<>
 			{/* <Header />	 */}
 			<main className='section'>
-				<h2 className='title-1'>Projects</h2>
-				<ul className='projects flex flex-wrap justify-center gap-x-[3rem] gap-y-[2rem]'>
+				<h2 className='title-1 text-h2 p-[2rem] text-center font-bold'>
+					Projects
+				</h2>
+				<ul className='projects flex flex-wrap justify-center gap-x-[3rem] gap-y-[2rem] px-[2rem] py-[2rem]'>
 					{projectsData.map((projectData) => {
 						return (
 							<Project
@@ -18,8 +20,8 @@ const ProjectsPage = () => {
 								img={projectData.img}
 								path={projectData.path}
 								className={cn([
-									'project bg-background max-w-[37rem]',
-									'hover:text-primary/80 active:text-primary duration-base ease-soft mr-auto text-[2.5rem] transition-all hover:-translate-y-[0.2rem] active:translate-y-0',
+									'project bg-accent-foreground text-card max-w-[37rem] rounded-[1rem]',
+									'hover:text-primary/80 active:text-primary duration-base ease-soft transition-all hover:-translate-y-[0.2rem] active:translate-y-0',
 								])}
 							/>
 						)
