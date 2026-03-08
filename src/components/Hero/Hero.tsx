@@ -17,7 +17,7 @@ const Hero = () => {
 				<div className='header__text mb-[4rem] space-y-[0.5em] text-[2rem] leading-[1.333]'>
 					<p>with passion for learning and creating.</p>
 				</div>
-				<DownloadButton url="/cv.pdf" text="Download CV"  />
+				<DownloadButton url="##" text="Download CV"  />
 			</div>
 		</div>
 	)
