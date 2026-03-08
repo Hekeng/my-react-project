@@ -1,7 +1,7 @@
 // import './style/main.css'
 import './index.css'
 
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router'
 import RouterWrapper from './router'
 import Footer from './components/footer/Footer'
 import { ThemeProvider } from './components/themaController/ThemeProvider'

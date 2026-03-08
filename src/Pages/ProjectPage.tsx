@@ -3,7 +3,7 @@
 import ExternalLinkButton from '../components/ExternalLinkButton/ExternalLinkButton'
 
 import { projectsData } from '../components/helpers/ProjectsList'
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router'
 import Page404 from './Page404'
 
 const ProjectsPage = () => {
