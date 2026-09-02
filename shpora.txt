@@ -1,280 +1,1228 @@
- npm run dev -- --host 0.0.0.0
-npm install
-
-https://supabase.com/
-https://vite.dev/
-https://reactrouter.com/
-https://www.i18next.com/
-https://ui.shadcn.com/
-
-
-
-ErsteRpobe/
-├─ node_modules/         # установленные библиотеки
-├─ public/               # статические файлы (favicon, картинки)
-├─ src/                  # основной код
-│  ├─ assets/            # картинки и стили
-│  ├─ App.tsx            # главный компонент приложения
-│  ├─ main.tsx           # точка входа, рендерит App в браузере
-│  └─ index.css          # базовые стили (подключаем Tailwind позже)
-├─ package.json          # список зависимостей и скриптов
-├─ tsconfig.json         # конфигурация TypeScript
-├─ vite.config.ts        # конфигурация Vite
-
-
-const [stateVariable, setStateVariable] = useState<Тип>(начальноеЗначение)
-
-    stateVariable — текущие данные (например строка, число, объект)
-
-    setStateVariable — функция, которая меняет state
-
-    Тип (TypeScript) — <string> или <number> и т.д.
-
-    Начальное значение — значение при первом рендере
-
-React.createElement(type, props, children)
-
-<form  onSubmit={(e) => e.preventDefault()} action="" method="post">
-			<label htmlFor="inp-text">Input your text: </label>
-			<input type="text" name="" id="inp-text" value={text} onChange={handleChange}/>
-			<button type="button" onClick={clearInput}>CLEAR</button>
-		</form>
-        
-e.target.value      // текст в input
-e.target.checked    // checkbox
-e.preventDefault()  // отмена submit
-
-localStorage: 
-Метод	            Что делает	                Пример
-setItem(key, value)	сохраняет значение	        localStorage.setItem('theme', 'dark')
-getItem(key)	    получает значение	        localStorage.getItem('theme') → 'dark'
-removeItem(key)	    удаляет ключ	            localStorage.removeItem('theme')
-clear()	            чистит всё	                localStorage.clear()
-
-💡 Значение всегда строка. Если хочешь хранить объекты, нужно использовать JSON.stringify() / JSON.parse().
-
-//////////////////////////////////////////////////////
-Режим обучения:
-шаг = X
-формат = теория | пример | задание
-скорость = медленно
-
-
-1 — JSX как синтаксис
-2 — компоненты
-3 — props
-4 — children
-5 — списки
-6 — события
-7 — state ← только здесь
-8 — эффекты
-9 — архитектура
-10 — роутер
-11 — оптимизация
-
-array.map((element, index, array) => {
-   return новоеЗначение
-})
-
-Параметры callback
-аргумент	что это
-element	текущий элемент
-index	индекс
-array	исходный массив
-
-
-
-
-
-///////////////////////////////////////////////
-План изучения TypeScript + React стек
-Часть 1: Основы TypeScript
-
-Установка и настройка TypeScript
-
-Примитивные типы: string, number, boolean
-
-Массивы, кортежи, объекты
-
-Функции и их типы
-
-Интерфейсы и типы (interface, type)
-
-Union и Literal types
-
-Generics (обобщения)
-
-Часть 2: Основы React
-
-Создание проекта React с Vite + TypeScript
-
-Структура проекта (main.tsx, App.tsx, components)
-
-JSX и базовые функциональные компоненты
-
-Props в компонентах
-
-State с useState
-
-Обработка событий (onClick, onChange)
-
-Хук useEffect и жизненный цикл компонентов
-
-Композиция компонентов и children
-
-Часть 3: React Router
-
-Установка и настройка React Router
-
-Настройка Route и Link
-
-Динамические маршруты и useParams
-
-Часть 4: TailwindCSS
-
-Установка и базовая настройка Tailwind
-
-Основные классы и утилиты для стилизации
-
-Часть 5: i18next
-
-Установка и настройка i18next
-
-Использование переводов и переключение языков
-
-
-
-/////////////////////////////////////////////////
-
-ЭТАП 1 — База модели React (фундамент)
-
-Цель: понять как React думает.
-
-Что такое компонент (функция → UI)
-
-JSX как синтаксический сахар
-
-Что возвращает компонент
-
-Почему React перерендеривает
-
-Разница: переменная vs state
-
-Как React сравнивает DOM (Virtual DOM идея)
-
-ЭТАП 2 — Props и композиция
-
-Цель: научиться собирать интерфейс из деталей
-
-props как параметры функции
-
-типизация props в TS
-
-вложенные компоненты
-
-children prop
-
-композиция интерфейсов
-
-ЭТАП 3 — State (самое важное)
-
-Цель: управление данными
-
-что такое state концептуально
-
-useState устройство
-
-setter-функции
-
-batching обновлений
-
-асинхронность state
-
-ЭТАП 4 — События
-
-Цель: интерактивность
-
-события в JSX
-
-обработчики
-
-передача аргументов
-
-синтетические события React
-
-ЭТАП 5 — Рендеринг
-
-Цель: контроль отображения
-
-условный рендеринг
-
-списки и key
-
-фрагменты
-
-мемоизация
-
-ЭТАП 6 — Hooks глубоко
-
-Цель: перестать считать их магией
-
-архитектура hooks
-
-правила hooks
-
-useEffect подробно
-
-жизненный цикл компонента
-
-кастомные хуки
-
-ЭТАП 7 — Архитектура
-
-Цель: писать как в реальных проектах
-
-структура папок
-
-разделение логики и UI
-
-контейнерные компоненты
-
-переиспользуемость
-
-ЭТАП 8 — Реальный стек
-
-Цель: современный production React
-
-React Router
-
-i18next
-
-Tailwind
-
-оптимизация
-
-сборка Vite
-
-| Метод                                      | Что делает                                                                                    | Пример                                                                   | Что важно понять                                                                                                        |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
-| **`React.Children.map(children, fn)`**     | Проходит по всем дочерним элементам, вызывает `fn` для каждого, возвращает новый массив.      | `jsx React.Children.map(children, child => <li>{child}</li>)`            | Работает даже если `children` **не массив**. `fn` получает каждый ReactElement, индекс и ключ (ключ нужен для списков). |
-| **`React.Children.forEach(children, fn)`** | То же, что `map`, но **не возвращает массив**, просто выполняет функцию для каждого элемента. | `jsx React.Children.forEach(children, child => console.log(child.type))` | Полезно для побочных эффектов, отладок, логирования.                                                                    |
-| **`React.Children.toArray(children)`**     | Превращает `children` в **плоский массив ReactElement**, гарантированно массив.               | `jsx const arr = React.Children.toArray(children);`                      | Упрощает работу со списками, добавление ключей и сортировку.                                                            |
-| **`React.Children.count(children)`**       | Считает количество дочерних элементов.                                                        | `jsx console.log(React.Children.count(children))`                        | Работает корректно даже если `children` — один элемент, а не массив.                                                    |
-| **`React.Children.only(children)`**        | Проверяет, что **только один дочерний элемент**. Если больше — ошибка.                        | `jsx const onlyChild = React.Children.only(children)`                    | Полезно для обёрток, где допустим ровно один элемент (например, модальные окна).                                        |
-
-
-///////////////////////////////////////////////////////
-
-| Хук           | Синтаксис              | Что делает                 | Принимает             | Возвращает          |
-| ------------- | ---------------------- | -------------------------- | --------------------- | ------------------- |
-| `useState`    | `useState(init)`       | состояние                  | начальное значение    | `[state, setState]` |
-| `useEffect`   | `useEffect(fn, deps)`  | побочные эффекты           | функция + зависимости | ничего              |
-| `useRef`      | `useRef(val)`          | ссылка на DOM или значение | начальное значение    | `{ current }`       |
-| `useMemo`     | `useMemo(fn,deps)`     | кеш вычисления             | функция               | результат функции   |
-| `useCallback` | `useCallback(fn,deps)` | кеш функции                | функция               | функцию             |
-| `useContext`  | `useContext(ctx)`      | доступ к контексту         | контекст              | значение            |
-
-
-
-string | number | boolean | object | array | union
+export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[]
+
+export type Database = {
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+  public: {
+    Tables: {
+      address: {
+        Row: {
+          address1: string
+          address2: string | null
+          city: string
+          coordinates: unknown
+          country_code: string
+          id: string
+          zip: string
+        }
+        Insert: {
+          address1: string
+          address2?: string | null
+          city: string
+          coordinates: unknown
+          country_code: string
+          id?: string
+          zip: string
+        }
+        Update: {
+          address1?: string
+          address2?: string | null
+          city?: string
+          coordinates?: unknown
+          country_code?: string
+          id?: string
+          zip?: string
+        }
+        Relationships: []
+      }
+      company: {
+        Row: {
+          address: string
+          created_at: string
+          description_long: unknown
+          description_short: unknown
+          email: string | null
+          id: string
+          name: string
+          phone: string | null
+          slug: string
+          website: string | null
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          description_long: unknown
+          description_short: unknown
+          email?: string | null
+          id?: string
+          name: string
+          phone?: string | null
+          slug: string
+          website?: string | null
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          description_long?: unknown
+          description_short?: unknown
+          email?: string | null
+          id?: string
+          name?: string
+          phone?: string | null
+          slug?: string
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'company_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'company_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address_with_latlon'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      company_social_link: {
+        Row: {
+          company: string
+          created_at: string
+          handle: string
+          href: string
+          id: string
+          platform: string
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          handle: string
+          href: string
+          id?: string
+          platform: string
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          handle?: string
+          href?: string
+          id?: string
+          platform?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'company_social_link_company_fkey'
+            columns: ['company']
+            isOneToOne: false
+            referencedRelation: 'company'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'company_social_link_platform_fkey'
+            columns: ['platform']
+            isOneToOne: false
+            referencedRelation: 'social_media_platform'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      event: {
+        Row: {
+          address: string
+          category: string
+          company: string | null
+          created_at: string
+          description_long: unknown
+          description_short: unknown
+          email: string | null
+          end_at: string
+          id: string
+          interval: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week: number | null
+          interval_value: number | null
+          name: string
+          phone: string | null
+          slug: string
+          start_at: string
+          website: string | null
+        }
+        Insert: {
+          address: string
+          category: string
+          company?: string | null
+          created_at?: string
+          description_long: unknown
+          description_short: unknown
+          email?: string | null
+          end_at: string
+          id?: string
+          interval?: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week?: number | null
+          interval_value?: number | null
+          name: string
+          phone?: string | null
+          slug: string
+          start_at: string
+          website?: string | null
+        }
+        Update: {
+          address?: string
+          category?: string
+          company?: string | null
+          created_at?: string
+          description_long?: unknown
+          description_short?: unknown
+          email?: string | null
+          end_at?: string
+          id?: string
+          interval?: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week?: number | null
+          interval_value?: number | null
+          name?: string
+          phone?: string | null
+          slug?: string
+          start_at?: string
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address_with_latlon'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_category_fkey'
+            columns: ['category']
+            isOneToOne: false
+            referencedRelation: 'event_category'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_company_fkey'
+            columns: ['company']
+            isOneToOne: false
+            referencedRelation: 'company'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      event_category: {
+        Row: {
+          created_at: string
+          id: string
+          name: unknown
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: unknown
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: unknown
+          slug?: string
+        }
+        Relationships: []
+      }
+      event_event_tag: {
+        Row: {
+          event: string
+          tag: string
+        }
+        Insert: {
+          event: string
+          tag: string
+        }
+        Update: {
+          event?: string
+          tag?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_event_tag_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_event_tag_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event_with_interval'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_event_tag_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'view_user_event_favourites'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_event_tag_tag_fkey'
+            columns: ['tag']
+            isOneToOne: false
+            referencedRelation: 'event_tag'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      event_exception: {
+        Row: {
+          created_at: string
+          event_id: string
+          except_date: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          event_id: string
+          except_date: string
+          id?: string
+        }
+        Update: {
+          created_at?: string
+          event_id?: string
+          except_date?: string
+          id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_exception_event_id_fkey'
+            columns: ['event_id']
+            isOneToOne: false
+            referencedRelation: 'event'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+
+      event_social_link: {
+        Row: {
+          created_at: string
+          event: string
+          handle: string
+          href: string
+          id: string
+          platform: string
+        }
+        Insert: {
+          created_at?: string
+          event: string
+          handle: string
+          href: string
+          id?: string
+          platform: string
+        }
+        Update: {
+          created_at?: string
+          event?: string
+          handle?: string
+          href?: string
+          id?: string
+          platform?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_social_link_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_social_link_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event_with_interval'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_social_link_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'view_user_event_favourites'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_social_link_platform_fkey'
+            columns: ['platform']
+            isOneToOne: false
+            referencedRelation: 'social_media_platform'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      event_tag: {
+        Row: {
+          created_at: string
+          group: string
+          id: string
+          name: unknown
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          group: string
+          id?: string
+          name: unknown
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          group?: string
+          id?: string
+          name?: unknown
+          slug?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_tag_group_fkey'
+            columns: ['group']
+            isOneToOne: false
+            referencedRelation: 'event_tag_group'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      event_tag_group: {
+        Row: {
+          created_at: string
+          id: string
+          name: unknown
+          slug: string
+          icon: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: unknown
+          slug: string
+          icon: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: unknown
+          slug?: string
+          icon?: string
+        }
+        Relationships: []
+      }
+      gastronomy: {
+        Row: {
+          address: string
+          category: string
+          company: string | null
+          created_at: string
+          description_long: unknown
+          description_short: unknown
+          email: string | null
+          id: string
+          name: string
+          phone: string | null
+          slug: string
+          website: string | null
+        }
+        Insert: {
+          address: string
+          category: string
+          company?: string | null
+          created_at?: string
+          description_long: unknown
+          description_short: unknown
+          email?: string | null
+          id?: string
+          name: string
+          phone?: string | null
+          slug: string
+          website?: string | null
+        }
+        Update: {
+          address?: string
+          category?: string
+          company?: string | null
+          created_at?: string
+          description_long?: unknown
+          description_short?: unknown
+          email?: string | null
+          id?: string
+          name?: string
+          phone?: string | null
+          slug?: string
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'gastronomy_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address_with_latlon'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_category_fkey'
+            columns: ['category']
+            isOneToOne: false
+            referencedRelation: 'gastronomy_category'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_company_fkey'
+            columns: ['company']
+            isOneToOne: false
+            referencedRelation: 'company'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      gastronomy_category: {
+        Row: {
+          created_at: string
+          id: string
+          name: unknown
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: unknown
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: unknown
+          slug?: string
+        }
+        Relationships: []
+      }
+      gastronomy_gastronomy_tag: {
+        Row: {
+          gastronomy: string
+          tag: string
+        }
+        Insert: {
+          gastronomy: string
+          tag: string
+        }
+        Update: {
+          gastronomy?: string
+          tag?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'gastronomy_gastronomy_tag_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'gastronomy'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_gastronomy_tag_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'view_user_gastronomy_favourites'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_gastronomy_tag_tag_fkey'
+            columns: ['tag']
+            isOneToOne: false
+            referencedRelation: 'gastronomy_tag'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      gastronomy_opening_time: {
+        Row: {
+          closes: string
+          day_of_week: number
+          gastronomy: string
+          id: string
+          opens: string
+        }
+        Insert: {
+          closes: string
+          day_of_week: number
+          gastronomy: string
+          id?: string
+          opens: string
+        }
+        Update: {
+          closes?: string
+          day_of_week?: number
+          gastronomy?: string
+          id?: string
+          opens?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'gastronomy_opening_time_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'gastronomy'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_opening_time_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'view_user_gastronomy_favourites'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      gastronomy_social_link: {
+        Row: {
+          created_at: string
+          gastronomy: string
+          handle: string
+          href: string
+          id: string
+          platform: string
+        }
+        Insert: {
+          created_at?: string
+          gastronomy: string
+          handle: string
+          href: string
+          id?: string
+          platform: string
+        }
+        Update: {
+          created_at?: string
+          gastronomy?: string
+          handle?: string
+          href?: string
+          id?: string
+          platform?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'gastronomy_social_link_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'gastronomy'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_social_link_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'view_user_gastronomy_favourites'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'gastronomy_social_link_platform_fkey'
+            columns: ['platform']
+            isOneToOne: false
+            referencedRelation: 'social_media_platform'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      gastronomy_tag: {
+        Row: {
+          created_at: string
+          group: string
+          id: string
+          name: unknown
+          slug: string
+        }
+        Insert: {
+          created_at?: string
+          group: string
+          id?: string
+          name: unknown
+          slug: string
+        }
+        Update: {
+          created_at?: string
+          group?: string
+          id?: string
+          name?: unknown
+          slug?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'gastronomy_tag_group_fkey'
+            columns: ['group']
+            isOneToOne: false
+            referencedRelation: 'gastronomy_tag_group'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      gastronomy_tag_group: {
+        Row: {
+          created_at: string
+          id: string
+          name: unknown
+          slug: string
+          icon: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: unknown
+          slug: string
+          icon: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: unknown
+          slug?: string
+          icon?: string
+        }
+        Relationships: []
+      }
+      social_media_platform: {
+        Row: {
+          created_at: string
+          icon: string
+          id: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          icon: string
+          id?: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          icon?: string
+          id?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      user_event_favourites: {
+        Row: {
+          event: string
+          queue_id: number | null
+          user: string
+        }
+        Insert: {
+          event: string
+          queue_id?: number | null
+          user: string
+        }
+        Update: {
+          event?: string
+          queue_id?: number | null
+          user?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'user_event_favorites_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'user_event_favorites_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'event_with_interval'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'user_event_favorites_event_fkey'
+            columns: ['event']
+            isOneToOne: false
+            referencedRelation: 'view_user_event_favourites'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      user_gastronomy_favourites: {
+        Row: {
+          gastronomy: string
+          user: string
+        }
+        Insert: {
+          gastronomy: string
+          user: string
+        }
+        Update: {
+          gastronomy?: string
+          user?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'user_gastronomy_favourites_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'gastronomy'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'user_gastronomy_favourites_gastronomy_fkey'
+            columns: ['gastronomy']
+            isOneToOne: false
+            referencedRelation: 'view_user_gastronomy_favourites'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      user_notification_period: {
+        Row: {
+          interval: string
+          user: string
+        }
+        Insert: {
+          interval?: string
+          user: string
+        }
+        Update: {
+          interval?: string
+          user?: string
+        }
+        Relationships: []
+      }
+    }
+    Views: {
+      address_with_latlon: {
+        Row: {
+          address1: string | null
+          address2: string | null
+          city: string | null
+          coordinates: unknown
+          country_code: string | null
+          id: string | null
+          latitude: number | null
+          longitude: number | null
+          zip: string | null
+        }
+        Insert: {
+          address1?: string | null
+          address2?: string | null
+          city?: string | null
+          coordinates?: unknown
+          country_code?: string | null
+          id?: string | null
+          latitude?: never
+          longitude?: never
+          zip?: string | null
+        }
+        Update: {
+          address1?: string | null
+          address2?: string | null
+          city?: string | null
+          coordinates?: unknown
+          country_code?: string | null
+          id?: string | null
+          latitude?: never
+          longitude?: never
+          zip?: string | null
+        }
+        Relationships: []
+      }
+      event_with_interval: {
+        Row: {
+          address: string | null
+          category: string | null
+          company: string | null
+          created_at: string | null
+          description_long: unknown
+          description_short: unknown
+          email: string | null
+          end_at: string | null
+          id: string | null
+          interval: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week: number | null
+          interval_value: number | null
+          name: string | null
+          phone: string | null
+          resolved_end: string | null
+          resolved_start: string | null
+          slug: string | null
+          start_at: string | null
+          website: string | null
+        }
+        Insert: {
+          address?: string | null
+          category?: string | null
+          company?: string | null
+          created_at?: string | null
+          description_long?: unknown
+          description_short?: unknown
+          email?: string | null
+          end_at?: string | null
+          id?: string | null
+          interval?: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week?: number | null
+          interval_value?: number | null
+          name?: string | null
+          phone?: string | null
+          resolved_end?: never
+          resolved_start?: never
+          slug?: string | null
+          start_at?: string | null
+          website?: string | null
+        }
+        Update: {
+          address?: string | null
+          category?: string | null
+          company?: string | null
+          created_at?: string | null
+          description_long?: unknown
+          description_short?: unknown
+          email?: string | null
+          end_at?: string | null
+          id?: string | null
+          interval?: Database['public']['Enums']['event_intervals'] | null
+          interval_day_of_week?: number | null
+          interval_value?: number | null
+          name?: string | null
+          phone?: string | null
+          resolved_end?: never
+          resolved_start?: never
+          slug?: string | null
+          start_at?: string | null
+          website?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: 'event_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_address_fkey'
+            columns: ['address']
+            isOneToOne: true
+            referencedRelation: 'address_with_latlon'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_category_fkey'
+            columns: ['category']
+            isOneToOne: false
+            referencedRelation: 'event_category'
+            referencedColumns: ['id']
+          },
+          {
+            foreignKeyName: 'event_company_fkey'
+            columns: ['company']
+            isOneToOne: false
+            referencedRelation: 'company'
+            referencedColumns: ['id']
+          },
+        ]
+      }
+      view_user_event_favourites: {
+        Row: {
+          address: Database['public']['Views']['address_with_latlon']['Row'] | null
+          end_at: string | null
+          id: string | null
+          name: string | null
+          slug: string | null
+          start_at: string | null
+          tags: Json | null
+          user: string | null
+        }
+        Relationships: []
+      }
+      view_user_gastronomy_favourites: {
+        Row: {
+          address: Database['public']['Views']['address_with_latlon']['Row'] | null
+          id: string | null
+          name: string | null
+          slug: string | null
+          tags: Json | null
+          user: string | null
+        }
+        Relationships: []
+      }
+    }
+    Functions: {
+      apply_event_interval: { Args: { event_id: string }; Returns: Json }
+      dashboard_event_by_category: {
+        Args: never
+        Returns: {
+          category_id: string
+          category_name: unknown
+          count: number
+        }[]
+      }
+      dashboard_event_by_year: {
+        Args: { eventYear: number }
+        Returns: {
+          count: number
+          month: number
+        }[]
+      }
+      dashboard_gastronomy_by_category: {
+        Args: never
+        Returns: {
+          category_id: string
+          category_name: unknown
+          count: number
+        }[]
+      }
+      enqueue_user_event_notification: {
+        Args: { event_id: string; user_id: string }
+        Returns: number[]
+      }
+      overview_events: {
+        Args: {
+          center: unknown
+          filter_slugs: string[]
+          from?: string
+          range: number
+          to?: string
+        }
+        Returns: {
+          address: Database['public']['Views']['address_with_latlon']['Row']
+          category: string
+          description_short: unknown
+          distance: number
+          end_at: string
+          id: string
+          name: string
+          resolved_end: string
+          resolved_start: string
+          slug: string
+          start_at: string
+          tags: Json
+        }[]
+      }
+      overview_events_global: {
+        Args: { filter_slugs: string[]; from?: string; to?: string }
+        Returns: {
+          address: Database['public']['Views']['address_with_latlon']['Row']
+          category: string
+          description_short: unknown
+          end_at: string
+          id: string
+          name: string
+          resolved_end: string
+          resolved_start: string
+          slug: string
+          start_at: string
+          tags: Json
+        }[]
+      }
+      overview_gastronomies: {
+        Args: { center: unknown; filter_slugs: string[]; range: number }
+        Returns: {
+          address: Database['public']['Views']['address_with_latlon']['Row']
+          category: string
+          description_short: unknown
+          distance: number
+          id: string
+          name: string
+          slug: string
+          tags: Json
+        }[]
+      }
+      overview_gastronomies_global: {
+        Args: { filter_slugs: string[] }
+        Returns: {
+          address: Database['public']['Views']['address_with_latlon']['Row']
+          category: string
+          description_short: unknown
+          id: string
+          name: string
+          slug: string
+          tags: Json
+        }[]
+      }
+    }
+    Enums: {
+      event_intervals:
+        | 'every_n_days'
+        | 'every_n_weeks'
+        | 'every_n_months'
+        | 'every_nth_day_of_month'
+        | 'every_nth_weekday_of_month'
+        | 'every_last_weekday_of_month'
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+}
+
+type DatabaseWithoutInternals = Omit<Database, '__InternalSupabase'>
+
+type DefaultSchema = DatabaseWithoutInternals[Extract<keyof Database, 'public'>]
+
+export type Tables<
+  DefaultSchemaTableNameOrOptions extends
+    | keyof (DefaultSchema['Tables'] & DefaultSchema['Views'])
+    | { schema: keyof DatabaseWithoutInternals },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'] &
+        DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Views'])
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'] &
+      DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Views'])[TableName] extends {
+      Row: infer R
+    }
+    ? R
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema['Tables'] & DefaultSchema['Views'])
+    ? (DefaultSchema['Tables'] & DefaultSchema['Views'])[DefaultSchemaTableNameOrOptions] extends {
+        Row: infer R
+      }
+      ? R
+      : never
+    : never
+
+export type TablesInsert<
+  DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables'] | { schema: keyof DatabaseWithoutInternals },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables']
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'][TableName] extends {
+      Insert: infer I
+    }
+    ? I
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables']
+    ? DefaultSchema['Tables'][DefaultSchemaTableNameOrOptions] extends {
+        Insert: infer I
+      }
+      ? I
+      : never
+    : never
+
+export type TablesUpdate<
+  DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables'] | { schema: keyof DatabaseWithoutInternals },
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables']
+    : never = never,
+> = DefaultSchemaTableNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions['schema']]['Tables'][TableName] extends {
+      Update: infer U
+    }
+    ? U
+    : never
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema['Tables']
+    ? DefaultSchema['Tables'][DefaultSchemaTableNameOrOptions] extends {
+        Update: infer U
+      }
+      ? U
+      : never
+    : never
+
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema['Enums'] | { schema: keyof DatabaseWithoutInternals },
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions['schema']]['Enums']
+    : never = never,
+> = DefaultSchemaEnumNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions['schema']]['Enums'][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema['Enums']
+    ? DefaultSchema['Enums'][DefaultSchemaEnumNameOrOptions]
+    : never
+
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema['CompositeTypes']
+    | { schema: keyof DatabaseWithoutInternals },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes']
+    : never = never,
+> = PublicCompositeTypeNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes'][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema['CompositeTypes']
+    ? DefaultSchema['CompositeTypes'][PublicCompositeTypeNameOrOptions]
+    : never
+
+export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
+  public: {
+    Enums: {
+      event_intervals: [
+        'every_n_days',
+        'every_n_weeks',
+        'every_n_months',
+        'every_nth_day_of_month',
+        'every_nth_weekday_of_month',
+        'every_last_weekday_of_month',
+      ],
+    },
+  },
+} as const
 
